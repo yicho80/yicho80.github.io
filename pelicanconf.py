@@ -27,7 +27,7 @@ PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["tag_cloud"]
 
 # Theme
-THEME = 'foundation-default-colours'
+THEME = 'my-foundation-default-colours'
 FOUNDATION_FRONT_PAGE_FULL_ARTICLES = False
 FOUNDATION_ALTERNATE_FONTS = False
 FOUNDATION_TAGS_IN_MOBILE_SIDEBAR = False
