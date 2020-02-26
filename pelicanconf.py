@@ -4,9 +4,11 @@ from __future__ import unicode_literals
 
 AUTHOR = 'yicho80'
 SITENAME = 'blooog'
-SITEURL = 'http://localhost:8000/'
+SITEURL = 'http://localhost:8000'
 
 PATH = 'content'
+ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{slug}.html'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{slug}.html'
 
 TIMEZONE = 'Asia/Seoul'
 
