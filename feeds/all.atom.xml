@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bloog</title><link href="https://yicho80.github.io/" rel="alternate"></link><link href="https://yicho80.github.io/feeds/all.atom.xml" rel="self"></link><id>https://yicho80.github.io/</id><updated>2024-02-20T00:00:00+09:00</updated><entry><title>About</title><link href="https://yicho80.github.io/about.html" rel="alternate"></link><published>2024-02-20T00:00:00+09:00</published><updated>2024-02-20T00:00:00+09:00</updated><author><name>yicho80</name></author><id>tag:yicho80.github.io,2024-02-20:/about.html</id><content type="html">&lt;p&gt;&lt;img alt="So Schmexy" src="https://yicho80.github.io/assets/images/Penguins.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;Hi, I am &lt;username&gt; and I wrote this epic collection of Interweb
-wisdom. In days of yore, much of this would have been deemed sorcery
-and I would probably have been burned at the stake.&lt;/p&gt;
-&lt;p&gt;😆&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>First Post on My Sweet New Blog</title><link href="https://yicho80.github.io/first-post-on-my-sweet-new-blog.html" rel="alternate"></link><published>2024-02-20T00:00:00+09:00</published><updated>2024-02-20T00:00:00+09:00</updated><author><name>Your Name Here</name></author><id>tag:yicho80.github.io,2024-02-20:/first-post-on-my-sweet-new-blog.html</id><content type="html">&lt;h1&gt;I am On My Way To Internet Fame and Fortune!&lt;/h1&gt;
-&lt;p&gt;This is my first post on my new blog. While not super informative it
-should convey my sense of excitement and eagerness to engage with you,
-the reader!&lt;/p&gt;</content><category term="misc"></category></entry></feed>
