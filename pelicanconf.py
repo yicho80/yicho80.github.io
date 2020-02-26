@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'yicho80'
 SITENAME = 'blooog'
-SITEURL = 'http://localhost:8000'
+SITEURL = ''
 
 PATH = 'content'
 ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{slug}.html'
