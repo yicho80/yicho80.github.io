@@ -21,7 +21,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Plugins
-PLUGIN_PATHS = ["pelican-plugins"]
+PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["tag_cloud"]
 
 # Theme
