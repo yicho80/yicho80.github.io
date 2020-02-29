@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- Bootstrap CSS -->
+		<!-- CSS -->
 		<link rel="stylesheet" href="/theme/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/theme/css/fontawesome.min.css" />
 		<link rel="stylesheet" href="/theme/css/custom.css" />
@@ -54,11 +54,11 @@
 				<div class="row d-none d-sm-none d-md-block">
 					<div class="col d-flex justify-content-center">
 						<nav class="navbar text-muted text-center justify-content-between">
-					      <a class="p-3 text-muted" href="/index.html"><i class="mb-2 fa fa-fw fa-home"></i><br><h6>Home</h6></a>
-					      <a class="p-3 text-muted" href="/pages/about.html"><i class="mb-2 fa fa-fw fa-user"></i><br><h6>About</h6></a>
-					      <a class="p-3 text-muted" href="/archives.html"><i class="mb-2 fa fa-fw fa-archive"></i><br><h6>Archieve</h6></a>
-					      <a class="p-3 text-muted" href="/tags.html"><i class="mb-2 fa fa-fw fa-tag"></i><br><h6>Tags</h6></a>
-					      <a class="p-3 text-muted" href="#"><i class="mb-2 fa fa-fw fa-sitemap"></i><br><h6>Sitemap</h6></a>
+					      <a class="p-3 text-muted" href="/index.html"><i class="mb-2 fa fa-fw fa-home"></i><br><h6 class="small">Home</h6></a>
+					      <a class="p-3 text-muted" href="/pages/about.html"><i class="mb-2 fa fa-fw fa-user"></i><br><h6 class="small">About</h6></a>
+		 			      <a class="p-3 text-muted" href="/archives.html"><i class="mb-2 fa fa-fw fa-archive"></i><br><h6 class="small">Archieve</h6></a>
+					      <a class="p-3 text-muted" href="/tags.html"><i class="mb-2 fa fa-fw fa-tag"></i><br><h6 class="small">Tags</h6></a>
+					      <a class="p-3 text-muted" href="/categories.html"><i class="mb-2 fa fa-fw fa-sitemap"></i><br><h6 class="small">Sitemap</h6></a>
 						</nav>
 					</div>
 				</div>
@@ -67,41 +67,92 @@
 			<main role="main" class="container">
 			  	<div class="row">
 			  		<div class="col-sm-12 col-md-10">
-<article>
-	<h2>My super title</h2>
-	<p>Following is a review of my favorite mechanical keyboard.Following is a review of my favorite mechanical keyboard.Following is a review of my favorite mechanical keyboard.Following is a review of my favorite mechanical keyboard.Following is a review of my favorite mechanical keyboard.Following is a review of my favorite mechanical keyboard.Following is a review of my favorite mechanical keyboard.</p>
-<p><a href="/assets/images/Jellyfish.jpg">Alt Text</a></p>
-	<hr/>
-	<h6>Written by <a href="/author/abc.html">abc</a> in <a href="/category/category2.html">category2</a> on 월 03 12월 1010. Tags: <a href="/tag/pelican.html">pelican</a>, <a href="/tag/publishing.html">publishing</a>, </h6>
-</article>
-
+<div class="row">
+	<article>
+		<h3>가나다라마바사 아자차카타하</h3>
+		<h6 class="small text-muted"><i class="mb-2 pr-1 far fa-calendar"></i> Posted on 1010-12-03 <span class="p-2">|</span> <i class="mb-2 pr-1 far fa-folder"></i> In <a class="text-dark" href="/category/category2.html">category2</a> </h6>
+		<div class=" style="line-height: 12.5em;"><p>최근에 한국어 텍스트 분석을 연습할 수 있는 데이터를 공유하고 있습니다. 데이터 분석 연습의 첫 코드가 분석이 아닌 데이터 수집이지 않기를 바래서 였습니다. 데이터셋의 구성과 앞으로 추가하려는 종류의 데이터, 그리고 연습 가능한 문제들을 살펴봅니다.</p>
+<p>Textmining dataset
+성능 평가까지 가능한 공개된 데이터들은 머신러닝과 자연어처리 분야의 발전에 큰 기여를 하였습니다. 분명 컴퓨터 비전 분야의 경우에는 ImageNet 데이터를 이용한 competition 이 모델의 발전을 촉진했습니다. 특정 tasks 를 위한 labeled data 가 있다면 기존 알고리즘과 비교하며 새로운 알고리즘의 성능을 객관적으로 평가할 수 있습니다. NLP 에서도 CoNLL 의 shared task dataset 이 공개되어 있으며, 질의 응답 분야도 SQuAD dataset 이 발전에 큰 기여를 하였습니다. 그리고 각 테스크 별로 잘 정의된 데이터셋이 공유되고 있습니다. 이런 정리들은 여러 사람들이 정리하여 블로그나 github 에 공유되고 있기도 합니다.</p>
+<p>최근에는 한국어 질의 응답용 KorQuAD 데이터도 공유되었습니다. 이전에도 한국어 감성 분석 (sentiment analysis) 을 위하여 네이버 영화 리뷰를 정리해둔 Naver sentiment movie corpus v1.0 이 공유되기도 했습니다.</p>
+<p>이처럼 객관적인 성능을 평가할 수 있는 데이터도 필요하지만, 데이터 분석 공부를 시작할 때에도 손쉽게 접근할 수 있는 데이터셋이 여러 종류가 있다면 좋을 것입니다. 영화 리뷰, 뉴스, 뉴스 댓글 등 우리가 접근할 수 있는 데이터들은 많지만, 이 데이터들은 우리가 수집을 해야만 합니다. 처음 데이터 분석을 시작하려 할 때, 분석 코드가 아닌 데이터 수집 코드부터 작성하는 모습을 종종 보곤 했습니다. 데이터 분석을 하고 싶다면 첫 코드가 데이터 분석이었으면 좋겠습니다.</p>
+<p>이러한 목적에서 수집된 한글 텍스트 데이터를 공유하는 작업을 진행하고 있습니다. 그리고 이 데이터를 이용한 usages 도 공유하려 하고 있습니다. 데이터셋의 repository 는 github.com/lovit/textmining_dataset 입니다. 그리고 이를 이용하는 textmining tutorial 을 github.com/lovit/python_ml4nlp 에 올리고 있습니다.</p>
+<p><a href="/assets/images/Jellyfish.jpg">Alt Text</a></p></div>
+		<br>
+		<h6><i class="mb-2 pr-1 fa fa-hashtag"></i> PELICAN, PUBLISHING, VERYLONGLONGTAG, AAAAAAAAAAAAAABD</h6>
+	</article>
+</div>
+<br>
+<div class="row">
+	<div class="col text-left">
+			
+	</div>
+	<div class="col text-right">
+		<a class="text-dark" href="/posts/1010/12/12345611111.html">My super title<i class="pl-2 fa fa-angle-right"></i></a>
+	</div>
+</div>
 <hr/>
+<div class="row">
+	<div class="col-sm-12">
+		<h3>Comments</h3>
+		<div id="disqus_thread"></div>
+		<script>
+			var disqus_shortname = 'yicho80-github-io';
+			(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	</div>
+</div>
 			  		</div>
+			  		<!-- sidebar -->
 			  		<div class="col-md-2 d-none d-sm-none d-md-block">
 			  			<div class="sidebar">
 							<div class="panel">
-								<h5>Tags</h5>
-								<ul class="tag-cloud">
-									<li><a href="/tag/publishing.html" class="tag-4">publishing</a></li>
-									<li><a href="/tag/pelican.html" class="tag-4">pelican</a></li>
+								<h5 class="title">Categories</h5>
+								<ul class="content list-unstyled">
+									<li><a class="p-1 text-dark" href="/category/cat1-2.html">- cat1-2</a></li>
+									<li><a class="p-1 text-dark" href="/category/category1.html">- category1</a></li>
+									<li><a class="p-1 text-dark" href="/category/category2.html">- category2</a></li>
 								</ul>
 							</div>
 
 							<div class="panel">
-								<h5>Monthly Archives</h5>
-								<ul class="side-nav">
-											<li><a href="/posts/3010/12/index.html">12월 3010 (2)</a></li>
-											<li><a href="/posts/2010/12/index.html">12월 2010 (4)</a></li>
-											<li><a href="/posts/2010/10/index.html">10월 2010 (2)</a></li>
-											<li><a href="/posts/1010/12/index.html">12월 1010 (3)</a></li>
+								<h5 class="title">Tags</h5>
+								<ul class="content tag-cloud">
+									<li><a href="/tag/aaaaaaaaaaaaaabd.html" class="tag-4 text-dark">aaaaaaaaaaaaaabd</a></li>
+									<li><a href="/tag/verylonglongtag.html" class="tag-3 text-dark">verylonglongtag</a></li>
+									<li><a href="/tag/thinkwhateveryoucan.html" class="tag-4 text-dark">thinkwhateveryoucan</a></li>
+									<li><a href="/tag/publishing.html" class="tag-1 text-dark">publishing</a></li>
+									<li><a href="/tag/pelican.html" class="tag-1 text-dark">pelican</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5 class="title">Monthly Archives</h5>
+								<ul class="content list-unstyled">
+											<li><a class="p-1 text-dark" href="/posts/3010/12/index.html">- 3010 12월 (2)</a></li>
+											<li><a class="p-1 text-dark" href="/posts/2010/12/index.html">- 2010 12월 (4)</a></li>
+											<li><a class="p-1 text-dark" href="/posts/2010/10/index.html">- 2010 10월 (2)</a></li>
+											<li><a class="p-1 text-dark" href="/posts/1010/12/index.html">- 1010 12월 (3)</a></li>
 								</ul>
 							</div>
 						</div>
 			  		</div>
+			  		<!-- sidebar -->
 			  	</div>
 			</main>
 			<footer class="container">
-				footer
+				<div class="row d-flex justify-content-center">
+					<br>
+				</div>
+				<div class="row d-flex justify-content-center">
+					© 2020 Haha
+				</div>
 			</footer>
 		</div>
 

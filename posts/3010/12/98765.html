@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- Bootstrap CSS -->
+		<!-- CSS -->
 		<link rel="stylesheet" href="/theme/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/theme/css/fontawesome.min.css" />
 		<link rel="stylesheet" href="/theme/css/custom.css" />
@@ -54,11 +54,11 @@
 				<div class="row d-none d-sm-none d-md-block">
 					<div class="col d-flex justify-content-center">
 						<nav class="navbar text-muted text-center justify-content-between">
-					      <a class="p-3 text-muted" href="/index.html"><i class="mb-2 fa fa-fw fa-home"></i><br><h6>Home</h6></a>
-					      <a class="p-3 text-muted" href="/pages/about.html"><i class="mb-2 fa fa-fw fa-user"></i><br><h6>About</h6></a>
-					      <a class="p-3 text-muted" href="/archives.html"><i class="mb-2 fa fa-fw fa-archive"></i><br><h6>Archieve</h6></a>
-					      <a class="p-3 text-muted" href="/tags.html"><i class="mb-2 fa fa-fw fa-tag"></i><br><h6>Tags</h6></a>
-					      <a class="p-3 text-muted" href="#"><i class="mb-2 fa fa-fw fa-sitemap"></i><br><h6>Sitemap</h6></a>
+					      <a class="p-3 text-muted" href="/index.html"><i class="mb-2 fa fa-fw fa-home"></i><br><h6 class="small">Home</h6></a>
+					      <a class="p-3 text-muted" href="/pages/about.html"><i class="mb-2 fa fa-fw fa-user"></i><br><h6 class="small">About</h6></a>
+		 			      <a class="p-3 text-muted" href="/archives.html"><i class="mb-2 fa fa-fw fa-archive"></i><br><h6 class="small">Archieve</h6></a>
+					      <a class="p-3 text-muted" href="/tags.html"><i class="mb-2 fa fa-fw fa-tag"></i><br><h6 class="small">Tags</h6></a>
+					      <a class="p-3 text-muted" href="/categories.html"><i class="mb-2 fa fa-fw fa-sitemap"></i><br><h6 class="small">Sitemap</h6></a>
 						</nav>
 					</div>
 				</div>
@@ -67,41 +67,87 @@
 			<main role="main" class="container">
 			  	<div class="row">
 			  		<div class="col-sm-12 col-md-10">
-<article>
-	<h2>My super title3</h2>
-	<p>Following is a review of my favorite mechanical keyboard.
-<a href="/posts/3010/12/Penguins.jpg">Downloadable File</a></p>
-	<hr/>
-	<h6>Written by <a href="/author/alexis-metaireau.html">Alexis Metaireau</a> in <a href="/category/category1.html">category1</a> on 월 03 12월 3010. Tags: <a href="/tag/pelican.html">pelican</a>, <a href="/tag/publishing.html">publishing</a>, </h6>
-</article>
-
+<div class="row">
+	<article>
+		<h3>My super title3</h3>
+		<h6 class="small text-muted"><i class="mb-2 pr-1 far fa-calendar"></i> Posted on 3010-12-03 <span class="p-2">|</span> <i class="mb-2 pr-1 far fa-folder"></i> In <a class="text-dark" href="/category/category1.html">category1</a> </h6>
+		<div class=" style="line-height: 12.5em;"><p>Following is a review of my favorite mechanical keyboard.
+<a href="/posts/3010/12/Penguins.jpg">Downloadable File</a></p></div>
+		<br>
+		<h6><i class="mb-2 pr-1 fa fa-hashtag"></i> PELICAN, PUBLISHING</h6>
+	</article>
+</div>
+<br>
+<div class="row">
+	<div class="col text-left">
+		<a class="text-dark" href="/posts/3010/12/987654.html"><i class="pr-2 fa fa-angle-left"></i>My super title3</a>
+			
+	</div>
+	<div class="col text-right">
+	</div>
+</div>
 <hr/>
+<div class="row">
+	<div class="col-sm-12">
+		<h3>Comments</h3>
+		<div id="disqus_thread"></div>
+		<script>
+			var disqus_shortname = 'yicho80-github-io';
+			(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	</div>
+</div>
 			  		</div>
+			  		<!-- sidebar -->
 			  		<div class="col-md-2 d-none d-sm-none d-md-block">
 			  			<div class="sidebar">
 							<div class="panel">
-								<h5>Tags</h5>
-								<ul class="tag-cloud">
-									<li><a href="/tag/publishing.html" class="tag-4">publishing</a></li>
-									<li><a href="/tag/pelican.html" class="tag-4">pelican</a></li>
+								<h5 class="title">Categories</h5>
+								<ul class="content list-unstyled">
+									<li><a class="p-1 text-dark" href="/category/cat1-2.html">- cat1-2</a></li>
+									<li><a class="p-1 text-dark" href="/category/category1.html">- category1</a></li>
+									<li><a class="p-1 text-dark" href="/category/category2.html">- category2</a></li>
 								</ul>
 							</div>
 
 							<div class="panel">
-								<h5>Monthly Archives</h5>
-								<ul class="side-nav">
-											<li><a href="/posts/3010/12/index.html">12월 3010 (2)</a></li>
-											<li><a href="/posts/2010/12/index.html">12월 2010 (4)</a></li>
-											<li><a href="/posts/2010/10/index.html">10월 2010 (2)</a></li>
-											<li><a href="/posts/1010/12/index.html">12월 1010 (3)</a></li>
+								<h5 class="title">Tags</h5>
+								<ul class="content tag-cloud">
+									<li><a href="/tag/aaaaaaaaaaaaaabd.html" class="tag-4 text-dark">aaaaaaaaaaaaaabd</a></li>
+									<li><a href="/tag/verylonglongtag.html" class="tag-3 text-dark">verylonglongtag</a></li>
+									<li><a href="/tag/thinkwhateveryoucan.html" class="tag-4 text-dark">thinkwhateveryoucan</a></li>
+									<li><a href="/tag/publishing.html" class="tag-1 text-dark">publishing</a></li>
+									<li><a href="/tag/pelican.html" class="tag-1 text-dark">pelican</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5 class="title">Monthly Archives</h5>
+								<ul class="content list-unstyled">
+											<li><a class="p-1 text-dark" href="/posts/3010/12/index.html">- 3010 12월 (2)</a></li>
+											<li><a class="p-1 text-dark" href="/posts/2010/12/index.html">- 2010 12월 (4)</a></li>
+											<li><a class="p-1 text-dark" href="/posts/2010/10/index.html">- 2010 10월 (2)</a></li>
+											<li><a class="p-1 text-dark" href="/posts/1010/12/index.html">- 1010 12월 (3)</a></li>
 								</ul>
 							</div>
 						</div>
 			  		</div>
+			  		<!-- sidebar -->
 			  	</div>
 			</main>
 			<footer class="container">
-				footer
+				<div class="row d-flex justify-content-center">
+					<br>
+				</div>
+				<div class="row d-flex justify-content-center">
+					© 2020 Haha
+				</div>
 			</footer>
 		</div>
 
