@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+	<article>
+		<h3>{{ article.title }}</h3>
+		<h6 class="small text-muted"><i class="mb-2 pr-1 far fa-calendar"></i> Posted on {{ article.locale_date }} {% if article.category %} <span class="p-2">|</span> <i class="mb-2 pr-1 far fa-folder"></i> In <a class="text-dark" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category}}</a> {% endif %}</h6>
+		<div class=" style="line-height: 12.5em;">{{ article.content }}</div>
+		<br>
+		{% if article.tags|count > 0 %}
+		<h6><i class="mb-2 pr-1 fa fa-hashtag"></i> {{ article.tags|join(', ')|upper }}</h6>
+		{% endif %}
+	</article>
+</div>
+<br>
+<div class="row">
+	<div class="col text-left">
+		{% if article.prev_article %}
+		<a class="text-dark" href="{{ SITEURL }}/{{ article.prev_article.url}}"><i class="pr-2 fa fa-angle-left"></i>{{ article.prev_article.title }}</a>
+		{% endif %}			
+	</div>
+	<div class="col text-right">
+		{% if article.next_article %}
+		<a class="text-dark" href="{{ SITEURL }}/{{ article.next_article.url}}">{{ article.next_article.title }}<i class="pl-2 fa fa-angle-right"></i></a>
+		{% endif %}
+	</div>
+</div>
+<hr/>
+{% if DISQUS_SITENAME %}
+<div class="row">
+	<div class="col-sm-12">
+		<h3>Comments</h3>
+		<div id="disqus_thread"></div>
+		<script>
+			var disqus_shortname = '{{ DISQUS_SITENAME }}';
+			(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	</div>
+</div>
+{% endif %}
+{% endblock %}

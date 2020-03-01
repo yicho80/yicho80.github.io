@@ -5,3 +5,7 @@ Authors: aaaaaa
 Summary: Short version for index and feeds
 
 ABOUT SOMETHING
+
+contact me
+[a link relative to the current file]({filename}about.md)
+[a link relative to the current file]({filename}../category1/keyboard-review.md)

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="{{ SITEURL }}/theme/css/fontawesome.min.css" />
+		<link rel="stylesheet" href="{{ SITEURL }}/theme/css/custom.css" />
+
+		<title>{% block windowtitle %}{{ SITENAME }}{% endblock %}</title>
+		<meta name="description" content="">
+		<meta name="author" content="{{ AUTHOR }}">
+
+		{% include "analytics.html" %}
+	</head>
+	<body>
+		<div class="container">
+			<header class="container">
+				<!-- mobile nav -->
+				<div class="row d-sm-block d-md-none">
+					<div class="col">
+						<div class="collapse" id="navbarToggleExternalContent">
+							<div class="bg-dark p-4">
+								<h5 class="text-white h4">Collapsed content</h5>
+								<span class="text-muted">Toggleable via the navbar brand.</span>
+							</div>
+						</div>
+						<nav class="navbar">
+							<button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+							</button>
+						</nav>
+					</div>
+				</div>
+				<div class="row d-none d-sm-none d-md-block">
+					<div class="col d-flex justify-content-center">
+						<br>
+					</div>
+				</div>
+				<!-- mobile nav -->
+				
+				<div class="row d-flex justify-content-center">
+					<a class="text-dark text-decoration-none " href="{{ SITEURL }}/index.html"><h3>The World In a Nutshell</h3></a>
+				</div>
+
+				<!-- desktop nav -->
+				<div class="row d-sm-block d-md-none">
+					<div class="col d-flex justify-content-center">
+						<br>
+					</div>
+				</div>
+				<div class="row d-none d-sm-none d-md-block">
+					<div class="col d-flex justify-content-center">
+						<nav class="navbar text-muted text-center justify-content-between">
+					      <a class="p-3 text-muted" href="{{ SITEURL }}/index.html"><i class="mb-2 fa fa-fw fa-home"></i><br><h6 class="small">Home</h6></a>
+					      <a class="p-3 text-muted" href="{{ SITEURL }}/pages/about.html"><i class="mb-2 fa fa-fw fa-user"></i><br><h6 class="small">About</h6></a>
+		 			      <a class="p-3 text-muted" href="{{ SITEURL }}/archives.html"><i class="mb-2 fa fa-fw fa-archive"></i><br><h6 class="small">Archieve</h6></a>
+					      <a class="p-3 text-muted" href="{{ SITEURL }}/tags.html"><i class="mb-2 fa fa-fw fa-tag"></i><br><h6 class="small">Tags</h6></a>
+					      <a class="p-3 text-muted" href="{{ SITEURL }}/categories.html"><i class="mb-2 fa fa-fw fa-sitemap"></i><br><h6 class="small">Sitemap</h6></a>
+						</nav>
+					</div>
+				</div>
+				<!-- desktop nav -->
+			</header>
+			<main role="main" class="container">
+			  	<div class="row">
+			  		<div class="col-sm-12 col-md-10">
+						{% if pagetitle is defined %}
+						<div class="row">
+							<div class="col-sm-12">
+								<h3>{{ pagetitle }}</h3>
+							</div>
+						</div>
+						{% endif %}
+						{% block content %}{% endblock %}
+			  		</div>
+			  		<!-- sidebar -->
+			  		<div class="col-md-2 d-none d-sm-none d-md-block">
+			  			<div class="sidebar">
+							<div class="panel">
+								<h5 class="title">Categories</h5>
+								<ul class="content list-unstyled">
+									{% for category, articles in categories|sort %}
+									<li><a class="p-1 text-dark" href="{{ SITEURL }}/{{ category.url }}">- {{ category }}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5 class="title">Tags</h5>
+								<ul class="content tag-cloud">
+									{% for tag in tag_cloud %}
+									<li><a href="/tag/{{ tag.0|lower|replace(' ', '-') }}.html" class="tag-{{ tag.1 }} text-dark">{{ tag.0 }}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+
+							{% if MONTH_ARCHIVE_SAVE_AS %}
+							<div class="panel">
+								<h5 class="title">Monthly Archives</h5>
+								<ul class="content list-unstyled">
+									{% for year, date_year in dates|groupby( 'date.year' )|sort(reverse=True) %}
+										{% for month, articles in date_year|groupby( 'date.month' )|sort(reverse=True) %}
+											<li><a class="p-1 text-dark" href="/{{ MONTH_ARCHIVE_SAVE_AS.format(date=articles[0].date) }}">- {{ year }} {{ articles[0].date.strftime('%B') }} ({{ articles|count }})</a></li>
+										{% endfor %}
+									{% endfor %}
+								</ul>
+							</div>
+							{% endif %}
+						</div>
+			  		</div>
+			  		<!-- sidebar -->
+			  	</div>
+			</main>
+			<footer class="container">
+				<div class="row d-flex justify-content-center">
+					<br>
+				</div>
+				<div class="row d-flex justify-content-center">
+					© 2020 Haha
+				</div>
+			</footer>
+		</div>
+
+    	<!-- Optional JavaScript -->
+		<script src="{{ SITEURL }}/theme/js/jquery-3.4.1.slim.min.js"></script>
+		<script src="{{ SITEURL }}/theme/js/bootstrap.bundle.min.js"></script>
+		<script>
+			//$(document).foundation();
+			$(document).ready(function() {
+				// sidebar
+		        var sbOffset = $( '.sidebar' ).offset();
+		        $( window ).scroll( function() {
+		         	if ( $( document ).scrollTop() > sbOffset.top ) {
+		            	$( '.sidebar' ).addClass( 'sidebar-fixed' );
+		          	} else {
+		            	$( '.sidebar' ).removeClass( 'sidebar-fixed' );
+		          	}
+		        });
+			});
+		</script>
+ 	</body>
+</html>
+

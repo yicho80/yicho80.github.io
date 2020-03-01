@@ -1,3 +1,3 @@
-del /q /f output
+del /q /f /s output
 pelican content
 pelican -l
